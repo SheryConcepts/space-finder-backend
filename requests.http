@@ -1,0 +1,32 @@
+@endpoint = https://w5207kfi2l.execute-api.ap-northeast-1.amazonaws.com/prod/
+
+
+GET {{endpoint}}/spaces
+###
+
+GET {{endpoint}}/spaces?spaceId=167678cd-50f1-4b09-b2e3-c9b4ab48abc5
+###
+
+
+GET {{endpoint}}/spaces?location=London
+# This does not works as intended
+###
+
+POST {{endpoint}}/spaces
+Content-Type: application/json
+
+{
+    "location": "Sahiwal",
+    "name": "86"
+}
+###
+
+PUT {{endpoint}}/spaces?spaceId=4e752c22-4a64-454a-9657-10de98ff1c39
+Content-Type: application/json
+
+{
+    "location": "Lahore"
+}
+###
+
+DELETE {{endpoint}}/spaces?spaceId=4e752c22-4a64-454a-9657-10de98ff1c39
